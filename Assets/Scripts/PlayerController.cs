@@ -46,19 +46,37 @@ public class PlayerController : MonoBehaviour {
 
 
         // Jump
-        canJump = CanJump();
-        if(Input.GetButton("Jump") && canJump) {
+        //canJump = CanJump();
+        if(Input.GetButton("Jump") && CanJump()) {
             Jump();
         }
     }
 
+    // Checks if the player can jump (is it grounded?)
     bool CanJump() {
         RaycastHit hit;
         Physics.Raycast(transform.position, Vector3.down, out hit, 1);
         return hit.collider != null;
     }
 
+    // Makes the player jump upwards
     void Jump() {
         rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
+    }
+
+    // Slow the player (when in mud pit)
+    public static void Slow(float xRate, float jumpRate) {
+        instance.speed /= xRate;
+        instance.jumpForce /= jumpRate;
+    }
+
+    public static void EndSlow(float xRate, float jumpRate) {
+        instance.speed *= xRate;
+        instance.jumpForce *= jumpRate;
+    }
+
+    public static void Kill() {
+        // Currently resets the player
+        instance.transform.position = new Vector3(2, 2, 0);
     }
 }
