@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour {
 
     private static PlayerController instance;
     private Rigidbody rb;
-    private Vector3 movementDirection;
+    private float movementDirection;
     private bool canJump = true;
 
     public float speed = 5.0f;
@@ -23,15 +23,18 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //Debug.DrawRay(transform.position, -Vector3.up * 1f, Color.yellow);
-	}
+
+        //movementDirection = Input.GetAxisRaw("Horizontal");
+        //rb.velocity = new Vector3(movementDirection * speed, rb.velocity.y, 0);
+
+    }
 
     void FixedUpdate() {
 
         // Character movement (horizontal axis)
-        movementDirection.x = Input.GetAxisRaw("Horizontal");
-        if(Input.GetAxis("Horizontal") != 0.0f) {
-            rb.velocity = new Vector3(Input.GetAxis("Horizontal") * speed, rb.velocity.y, 0);
+        movementDirection = Input.GetAxisRaw("Horizontal");
+        if(movementDirection != 0.0f) {
+            rb.velocity = new Vector3(movementDirection * speed, rb.velocity.y, 0);
         } else {
             // Stop player's horizontal movement
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
