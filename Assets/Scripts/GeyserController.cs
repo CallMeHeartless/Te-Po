@@ -29,7 +29,8 @@ public class GeyserController : MonoBehaviour {
             Physics.Raycast(transform.position, Vector3.up, out hit, height);
             Debug.DrawRay(transform.position, Vector3.up, Color.cyan, height);
             if (hit.collider != null) {
-                hit.transform.GetComponent<Rigidbody>().AddForce(Vector3.up * geyserForce * Time.fixedDeltaTime, ForceMode.VelocityChange);
+                //hit.transform.GetComponent<Rigidbody>().AddForce(Vector3.up * geyserForce * Time.fixedDeltaTime, ForceMode.VelocityChange);
+                hit.rigidbody.velocity = new Vector3(hit.rigidbody.velocity.x, geyserForce, 0);
                 if (hit.transform.CompareTag("Player")) {
                     //PlayerController.Kill();
                 }
@@ -38,17 +39,7 @@ public class GeyserController : MonoBehaviour {
 
     }
 
-    //void OnTriggerStay(Collider other) {
-    //    if (isGushing) {
-    //        other.GetComponent<Rigidbody>().AddForce(geyserForce * Vector3.up, ForceMode.VelocityChange);
-    //    }
-    //}
 
-    void Gush(Collider collider) {
-        if (collider.CompareTag("Player")) {
-            
-        }
-    }
 
     // Set geyser to gush after elapsed time
     IEnumerator StartGushing() {

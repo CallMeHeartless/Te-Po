@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
 
     public float speed = 5.0f;
     public float jumpForce = 100.0f;
+    public float gravityMultiplier = 2.5f;
 
 
 
@@ -30,23 +31,18 @@ public class PlayerController : MonoBehaviour {
         // Character movement (horizontal axis)
         movementDirection.x = Input.GetAxisRaw("Horizontal");
         if(Input.GetAxis("Horizontal") != 0.0f) {
-            rb.AddForce(new Vector3(Input.GetAxis("Horizontal"), 0, 0), ForceMode.VelocityChange);
-
-            // Constrain horizontal speed
-            if(Mathf.Abs(rb.velocity.x) > speed) {
-                rb.velocity = new Vector3(movementDirection.x * speed, rb.velocity.y, 0);
-            }
+            rb.velocity = new Vector3(Input.GetAxis("Horizontal") * speed, rb.velocity.y, 0);
         } else {
             // Stop player's horizontal movement
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
         }
 
-        // Player cannot jump if not grounded
-
-
-
-        // Jump
-        //canJump = CanJump();
+        // Accelerate player if falling
+        if(rb.velocity.y < 0 ) {
+            rb.AddForce(Vector3.down * gravityMultiplier, ForceMode.Force);
+        }
+      
+        // Jump if grounded
         if(Input.GetButton("Jump") && CanJump()) {
             Jump();
         }
@@ -61,7 +57,7 @@ public class PlayerController : MonoBehaviour {
 
     // Makes the player jump upwards
     void Jump() {
-        rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
+        rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.VelocityChange);
     }
 
     // Slow the player (when in mud pit)
