@@ -42,20 +42,20 @@ public class PlayerController : MonoBehaviour {
         }
 
         // Player cannot jump if not grounded
-        RaycastHit hit;
-        Physics.Raycast(transform.position, Vector3.down, out hit, 1);
-        if (hit.collider != null) {
-            canJump = true;
-            Debug.Log("Hit");
-        } else {
-            canJump = false;
-        }
+
 
 
         // Jump
+        canJump = CanJump();
         if(Input.GetButton("Jump") && canJump) {
             Jump();
         }
+    }
+
+    bool CanJump() {
+        RaycastHit hit;
+        Physics.Raycast(transform.position, Vector3.down, out hit, 1);
+        return hit.collider != null;
     }
 
     void Jump() {
