@@ -9,7 +9,6 @@ public class GeyserController : MonoBehaviour {
     public float gushDuration = 5.0f;
     public float height = 3.0f;
 
-    private float timer = 0.0f;
     private bool isGushing = false;
     private Transform geyserHeightMarker;
 
@@ -27,12 +26,12 @@ public class GeyserController : MonoBehaviour {
         if (isGushing) {
             RaycastHit hit;
             Physics.Raycast(transform.position, Vector3.up, out hit, height);
-            Debug.DrawRay(transform.position, Vector3.up, Color.cyan, height);
+            Debug.DrawLine(transform.position, geyserHeightMarker.transform.position, Color.cyan);
             if (hit.collider != null) {
                 //hit.transform.GetComponent<Rigidbody>().AddForce(Vector3.up * geyserForce * Time.fixedDeltaTime, ForceMode.VelocityChange);
                 hit.rigidbody.velocity = new Vector3(hit.rigidbody.velocity.x, geyserForce, 0);
                 if (hit.transform.CompareTag("Player")) {
-                    //PlayerController.Kill();
+                    PlayerController.Kill();
                 }
             }
         }
