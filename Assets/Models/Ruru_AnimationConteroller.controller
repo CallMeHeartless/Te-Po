@@ -8,7 +8,13 @@ AnimatorController:
   m_Name: Ruru_AnimationConteroller
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Platform
+  - m_Name: MakePlatform
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 1
+    m_Controller: {fileID: 0}
+  - m_Name: StopPlatform
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -33,7 +39,10 @@ AnimatorStateTransition:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: StopPlatform
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102323013787709316}
   m_Solo: 0
@@ -56,7 +65,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Platform
+    m_ConditionEvent: MakePlatform
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102164279824970684}
