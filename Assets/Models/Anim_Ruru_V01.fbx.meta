@@ -1,0 +1,206 @@
+fileFormatVersion: 2
+guid: 3286862d187e5c748ac9a40c2e17dea5
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: AngelHead
+    100002: AngelL2
+    100004: AngelLThigh
+    100006: AngelLWing1
+    100008: AngelLWing101
+    100010: AngelLWing102
+    100012: AngelLWing2
+    100014: AngelLWing201
+    100016: AngelLWing202
+    100018: AngelLWing203
+    100020: AngelLWing204
+    100022: AngelLWing3
+    100024: AngelLWing301
+    100026: AngelLWingCollarbone
+    100028: AngelNeck1
+    100030: AngelNeck2
+    100032: AngelPelvis
+    100034: AngelRArmCollarbone
+    100036: AngelRibcage
+    100038: AngelRibcageBone01
+    100040: AngelRLeg2
+    100042: AngelRLegThigh
+    100044: AngelRWing1
+    100046: AngelRWing101
+    100048: AngelRWing102
+    100050: AngelRWing2
+    100052: AngelRWing201
+    100054: AngelRWing202
+    100056: AngelRWing203
+    100058: AngelRWing204
+    100060: AngelRWing3
+    100062: AngelRWing301
+    100064: AngelSpine1
+    100066: AngelSpine2
+    100068: AngelSpine3
+    100070: AngelTail1
+    100072: AngelTail2
+    100074: AngelTail3
+    100076: //RootNode
+    100078: sm_Ruru
+    100080: sm_Ruru8
+    400000: AngelHead
+    400002: AngelL2
+    400004: AngelLThigh
+    400006: AngelLWing1
+    400008: AngelLWing101
+    400010: AngelLWing102
+    400012: AngelLWing2
+    400014: AngelLWing201
+    400016: AngelLWing202
+    400018: AngelLWing203
+    400020: AngelLWing204
+    400022: AngelLWing3
+    400024: AngelLWing301
+    400026: AngelLWingCollarbone
+    400028: AngelNeck1
+    400030: AngelNeck2
+    400032: AngelPelvis
+    400034: AngelRArmCollarbone
+    400036: AngelRibcage
+    400038: AngelRibcageBone01
+    400040: AngelRLeg2
+    400042: AngelRLegThigh
+    400044: AngelRWing1
+    400046: AngelRWing101
+    400048: AngelRWing102
+    400050: AngelRWing2
+    400052: AngelRWing201
+    400054: AngelRWing202
+    400056: AngelRWing203
+    400058: AngelRWing204
+    400060: AngelRWing3
+    400062: AngelRWing301
+    400064: AngelSpine1
+    400066: AngelSpine2
+    400068: AngelSpine3
+    400070: AngelTail1
+    400072: AngelTail2
+    400074: AngelTail3
+    400076: //RootNode
+    400078: sm_Ruru
+    400080: sm_Ruru8
+    2100000: blinn1
+    2100002: blinn2
+    4300000: sm_Ruru
+    4300002: sm_Ruru8
+    7400000: Fly
+    9500000: //RootNode
+    13700000: sm_Ruru
+    13700002: sm_Ruru8
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Fly
+      takeName: Fly
+      firstFrame: 10
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
