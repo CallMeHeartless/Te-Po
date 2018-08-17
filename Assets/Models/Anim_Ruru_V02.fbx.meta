@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3286862d187e5c748ac9a40c2e17dea5
+guid: 93bc76ebd59696148a33c76c1689d164
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -90,6 +90,7 @@ ModelImporter:
     4300000: sm_Ruru
     4300002: sm_Ruru8
     7400000: Fly
+    7400002: SummonPlatform
     9500000: //RootNode
     13700000: sm_Ruru
     13700002: sm_Ruru8
@@ -133,6 +134,34 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: SummonPlatform
+      takeName: SummonPlatform
+      firstFrame: 50
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
