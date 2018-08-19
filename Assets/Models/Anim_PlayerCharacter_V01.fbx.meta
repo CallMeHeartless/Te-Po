@@ -1,0 +1,287 @@
+fileFormatVersion: 2
+guid: a35d0e54a97caeb4f862ca80225447a1
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Base HumanHead
+    100004: Base HumanLCalf
+    100006: Base HumanLCollarbone
+    100008: Base HumanLDigit11
+    100010: Base HumanLDigit11 1
+    100012: Base HumanLDigit12
+    100014: Base HumanLDigit12 1
+    100016: Base HumanLDigit21
+    100018: Base HumanLDigit22
+    100020: Base HumanLFoot
+    100022: Base HumanLForearm
+    100024: Base HumanLPalm
+    100026: Base HumanLThigh
+    100028: Base HumanLUpperarm
+    100030: Base HumanNeck1
+    100032: Base HumanNeck2
+    100034: Base HumanPelvis
+    100036: Base HumanRArmCollarbone
+    100038: Base HumanRArmDigit11
+    100040: Base HumanRArmDigit12
+    100042: Base HumanRArmDigit21
+    100044: Base HumanRArmDigit22
+    100046: Base HumanRArmForearm
+    100048: Base HumanRArmPalm
+    100050: Base HumanRArmUpperarm
+    100052: Base HumanRibcage
+    100054: Base HumanRLegCalf
+    100056: Base HumanRLegDigit11
+    100058: Base HumanRLegDigit12
+    100060: Base HumanRLegFoot
+    100062: Base HumanRLegThigh
+    100064: Base HumanSpine1
+    100066: Base HumanSpine2
+    100068: Base HumanSpine3
+    100070: Base HumanSpine4
+    100072: cm_PlayerCharacter
+    100074: cm_PlayerCharacter_Cell
+    400000: //RootNode
+    400002: Base HumanHead
+    400004: Base HumanLCalf
+    400006: Base HumanLCollarbone
+    400008: Base HumanLDigit11
+    400010: Base HumanLDigit11 1
+    400012: Base HumanLDigit12
+    400014: Base HumanLDigit12 1
+    400016: Base HumanLDigit21
+    400018: Base HumanLDigit22
+    400020: Base HumanLFoot
+    400022: Base HumanLForearm
+    400024: Base HumanLPalm
+    400026: Base HumanLThigh
+    400028: Base HumanLUpperarm
+    400030: Base HumanNeck1
+    400032: Base HumanNeck2
+    400034: Base HumanPelvis
+    400036: Base HumanRArmCollarbone
+    400038: Base HumanRArmDigit11
+    400040: Base HumanRArmDigit12
+    400042: Base HumanRArmDigit21
+    400044: Base HumanRArmDigit22
+    400046: Base HumanRArmForearm
+    400048: Base HumanRArmPalm
+    400050: Base HumanRArmUpperarm
+    400052: Base HumanRibcage
+    400054: Base HumanRLegCalf
+    400056: Base HumanRLegDigit11
+    400058: Base HumanRLegDigit12
+    400060: Base HumanRLegFoot
+    400062: Base HumanRLegThigh
+    400064: Base HumanSpine1
+    400066: Base HumanSpine2
+    400068: Base HumanSpine3
+    400070: Base HumanSpine4
+    400072: cm_PlayerCharacter
+    400074: cm_PlayerCharacter_Cell
+    2100000: T_Character
+    2100002: T_Character_Cell
+    4300000: cm_PlayerCharacter
+    4300002: cm_PlayerCharacter_Cell
+    7400000: walk
+    7400002: JumpUp
+    7400004: JumpDown
+    7400006: idle
+    9500000: //RootNode
+    13700000: cm_PlayerCharacter
+    13700002: cm_PlayerCharacter_Cell
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walk
+      takeName: walk
+      firstFrame: 10
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: JumpUp
+      takeName: JumpUp
+      firstFrame: 50
+      lastFrame: 75
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: JumpDown
+      takeName: JumpDown
+      firstFrame: 80
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle
+      takeName: idle
+      firstFrame: 110
+      lastFrame: 140
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
