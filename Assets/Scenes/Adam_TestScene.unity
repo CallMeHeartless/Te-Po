@@ -1261,6 +1261,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114966582346567976, guid: b2899ca93cb902a499eb3c16070d2d84,
+        type: 2}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1248951484}
     - target: {fileID: 114307748891803268, guid: b2899ca93cb902a499eb3c16070d2d84,
         type: 2}
       propertyPath: Player
@@ -1271,11 +1276,6 @@ Prefab:
       propertyPath: Platforms.Array.data[0]
       value: 
       objectReference: {fileID: 445021424}
-    - target: {fileID: 114966582346567976, guid: b2899ca93cb902a499eb3c16070d2d84,
-        type: 2}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 1248951484}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2899ca93cb902a499eb3c16070d2d84, type: 2}
   m_IsPrefabAsset: 0
