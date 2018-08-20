@@ -5,13 +5,14 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: lambert1
+    2100000: T_Ground_Top
+    2100002: T_Ground_Cliff
     2300000: //RootNode
     3300000: //RootNode
     4300000: Ground_Center
   externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
