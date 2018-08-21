@@ -8,8 +8,10 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody rb;
     private float movementDirection;
     private bool canJump = true;
+    private Quaternion targetRotation;
 
     public float speed = 5.0f;
+    public float turnSpeed = 100.0f;
     public float jumpForce = 100.0f;
     public float gravityMultiplier = 2.5f;
 
@@ -24,8 +26,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        //movementDirection = Input.GetAxisRaw("Horizontal");
-        //rb.velocity = new Vector3(movementDirection * speed, rb.velocity.y, 0);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
 
     }
 
@@ -35,6 +36,8 @@ public class PlayerController : MonoBehaviour {
         movementDirection = Input.GetAxisRaw("Horizontal");
         if(movementDirection != 0.0f) {
             rb.velocity = new Vector3(movementDirection * speed, rb.velocity.y, 0);
+            targetRotation = Quaternion.LookRotation(Vector3.forward * movementDirection, Vector3.up);
+            Debug.Log(targetRotation);
         } else {
             // Stop player's horizontal movement
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
