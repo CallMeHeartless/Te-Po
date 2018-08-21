@@ -1382,7 +1382,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1973569067241160}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 8ee04b6c654d4374fa1f90795c2dc5ec, type: 3}
 --- !u!65 &65707516424272064
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1429,6 +1429,7 @@ MonoBehaviour:
   fMass: 0.175
   fPlayerRadius: 10
   fRotationSpeed: 10
+  fTime: 3
   Player: {fileID: 0}
   Platforms:
   - {fileID: 0}
@@ -1449,6 +1450,7 @@ MonoBehaviour:
   fMass: 0.175
   fPlayerRadius: 10
   fRotationSpeed: 10
+  fTime: 3
   Player: {fileID: 0}
   Platforms: []
   MagicPlatform: {fileID: 0}
