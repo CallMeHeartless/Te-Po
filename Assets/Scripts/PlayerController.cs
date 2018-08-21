@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -78,7 +79,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     public static void Kill() {
-        // Currently resets the player
-        instance.transform.position = new Vector3(2, 2, 0);
+        // Reload the current level
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
