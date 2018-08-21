@@ -8,6 +8,7 @@ public class GeyserController : MonoBehaviour {
     public float period = 5.0f;
     public float gushDuration = 5.0f;
     public float height = 3.0f;
+    public GameObject geyserStream;
 
     private bool isGushing = false;
     private Transform geyserHeightMarker;
@@ -44,12 +45,14 @@ public class GeyserController : MonoBehaviour {
     IEnumerator StartGushing() {
         yield return new WaitForSeconds(period);
         isGushing = true;
+        geyserStream.SetActive(true);
         StartCoroutine(StopGushing());
     }
 
     IEnumerator StopGushing() {
         yield return new WaitForSeconds(gushDuration);
         isGushing = false;
+        geyserStream.SetActive(false);
         StartCoroutine(StartGushing());
     }
 }
