@@ -27,6 +27,8 @@ public class WhetuAI : MonoBehaviour {
     private Vector3 vecTar;
 
     private Vector3[] vechover = new Vector3 [8];
+    public float fTime = 3.0f;
+    private float fSwoop = 0.0f;
 
     //GameObjects
     public GameObject Player;
@@ -168,7 +170,16 @@ public class WhetuAI : MonoBehaviour {
                 //if hover target is reached
                 if (transform.position == vechover[iSeq])
                 {
-                    iSeq = Random.Range(0, 7);
+                    if(fSwoop>= fTime)
+                    {
+                        iSeq = Random.Range(0, 7);
+                        fSwoop = 0.0f;
+                    }
+                    else
+                    {
+                        fSwoop = fSwoop + Time.deltaTime;
+                    }
+                    
                 }
             }
         }
