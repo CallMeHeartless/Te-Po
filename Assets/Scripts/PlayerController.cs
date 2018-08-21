@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 
     private static PlayerController instance;
     private Rigidbody rb;
+    private Animator anim;
     private float movementDirection;
     private bool canJump = true;
     private Quaternion targetRotation;
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
         instance = this;
         rb = this.GetComponent<Rigidbody>();
+        anim = this.GetComponentInChildren<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -38,10 +40,15 @@ public class PlayerController : MonoBehaviour {
         if(movementDirection != 0.0f) {
             rb.velocity = new Vector3(movementDirection * speed, rb.velocity.y, 0);
             targetRotation = Quaternion.LookRotation(Vector3.forward * movementDirection, Vector3.up);
-            Debug.Log(targetRotation);
+            anim.SetTrigger("Walk");
+            anim.ResetTrigger("Idle");
+            
         } else {
             // Stop player's horizontal movement
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
+            // Animation
+            anim.ResetTrigger("Walk");
+            anim.SetTrigger("Idle");
         }
 
         // Accelerate player if falling
@@ -65,6 +72,8 @@ public class PlayerController : MonoBehaviour {
     // Makes the player jump upwards
     void Jump() {
         rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.VelocityChange);
+        // Jump animation
+        anim.SetTrigger("Jump");
     }
 
     // Slow the player (when in mud pit)
