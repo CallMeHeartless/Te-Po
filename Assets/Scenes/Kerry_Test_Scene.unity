@@ -1559,6 +1559,11 @@ Prefab:
       propertyPath: gravityMultiplier
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 114838476673792312, guid: 46209e80c9639c84791d381bcf228f5a,
+        type: 2}
+      propertyPath: turnSpeed
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46209e80c9639c84791d381bcf228f5a, type: 2}
   m_IsPrefabAsset: 0

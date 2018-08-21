@@ -7,7 +7,7 @@ public class MudpitController : MonoBehaviour {
     public float playerXSlow = 1.5f;
     public float playerJumpSlow = 1.1f;
     public float killTime = 3.0f;
-    private bool hasPlayer = false;
+    private static bool hasPlayer = false;
 
 	// Use this for initialization
 	void Start () {
