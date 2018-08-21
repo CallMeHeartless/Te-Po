@@ -17,6 +17,9 @@ public class BirdwomanAI : MonoBehaviour {
     public float fTime = 3.0f;
     private float fSwoop = 0.0f;
 
+    private Vector3 vecPlayerPrev;
+    private bool bKILL = true;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -54,22 +57,44 @@ public class BirdwomanAI : MonoBehaviour {
         //rotate over time
         transform.rotation = Quaternion.Slerp(transform.rotation, quatLookRotation, fRotationSpeed * Time.deltaTime);
 
-        //move towards hover targets
-        transform.position = Vector3.MoveTowards(transform.position, vechover[iSeq], fMaxSpeed * Time.deltaTime);
-
-        //if hover target is reached
-        if (transform.position == vechover[iSeq])
+        //KILL!
+        if (bKILL == true)
         {
-            if(fSwoop >= fTime)
+            //KILL!
+            transform.position = Vector3.MoveTowards(transform.position, vecPlayerPrev, fMaxSpeed * Time.deltaTime);
+            if(transform.position == vecPlayerPrev)
             {
-                iSeq = Random.Range(0, 4);
-                fSwoop = 0.0f;
-            }
-            else
-            {
-                fSwoop = fSwoop + Time.deltaTime;
+                if(fSwoop>= fTime)
+                {
+                    bKILL = false;
+                    fSwoop = 0.0f;
+                    iSeq = Random.Range(0, 4);
+                }
+                else
+                {
+                    fSwoop = fSwoop + Time.deltaTime;
+                }
             }
         }
+        else
+        {
+            //move towards hover targets
+            transform.position = Vector3.MoveTowards(transform.position, vechover[iSeq], fMaxSpeed * Time.deltaTime);
+            if (transform.position == vechover[iSeq])
+            {
+                if (fSwoop >= fTime)
+                {
+                    bKILL = true;
+                    vecPlayerPrev = Player.transform.position;
+                    fSwoop = 0.0f;
+                }
+                else
+                {
+                    fSwoop = fSwoop + Time.deltaTime;
+                }
+            }
+        }
+
     }
 
 }
