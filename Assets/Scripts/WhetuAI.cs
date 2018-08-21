@@ -155,7 +155,10 @@ public class WhetuAI : MonoBehaviour {
                 //find vec from Whetu to target
                 vecDir = (vechover[iSeq] - transform.position).normalized;
                 //create rotation
-                quatLookRotation = Quaternion.LookRotation(vecDir);
+                if (vecDir != Vector3.zero) {
+                    quatLookRotation = Quaternion.LookRotation(vecDir);
+                }
+               
                 //rotate over time
                 transform.rotation = Quaternion.Slerp(transform.rotation, quatLookRotation, fRotationSpeed * Time.deltaTime);
 
