@@ -18,6 +18,8 @@ public class CameraController : MonoBehaviour {
 	void Start () {
         cameraHeight = Camera.main.orthographicSize * 2;
         cameraWidth = cameraHeight * Camera.main.aspect;
+        transform.position = player.transform.position + offset;
+        transform.LookAt(player.transform.position);
 
 
 	}
@@ -29,7 +31,7 @@ public class CameraController : MonoBehaviour {
 
         // If the player is a certain distance away, move the camera to follow them.
         if(playerDistance.magnitude > xBuffer) {
-            transform.position = Vector3.Lerp(transform.position, new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z), smoothspeed * Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, new Vector3(player.transform.position.x + offset.x, player.transform.position.y + offset.y, transform.position.z), smoothspeed * Time.deltaTime);
         }
 	}
 
