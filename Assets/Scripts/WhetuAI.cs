@@ -26,6 +26,9 @@ public class WhetuAI : MonoBehaviour {
     private Vector3 vecDesVelocity;
     private Vector3 vecTar;
 
+    private Vector3 vecCurrHeading;
+    private Vector3 vecTargetHeading;
+
     private Vector3[] vechover = new Vector3 [8];
     public float fTime = 3.0f;
     private float fSwoop = 0.0f;
@@ -42,9 +45,18 @@ public class WhetuAI : MonoBehaviour {
 	void Start () {
         
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    void FixedUpdate()
+    {
+        vecTargetHeading = vechover[iSeq] - transform.position;
+
+        vecCurrHeading = Vector3.Lerp(vecCurrHeading, vecTargetHeading, Time.deltaTime);
+
+
+    }
+
+    // Update is called once per frame
+    void Update () {
 
         
         //Distance to player
@@ -168,21 +180,15 @@ public class WhetuAI : MonoBehaviour {
                 transform.rotation = Quaternion.Slerp(transform.rotation, quatLookRotation, fRotationSpeed * Time.deltaTime);
 
                 //move towards hover targets
-                transform.position = Vector3.MoveTowards(transform.position, vechover[iSeq], fMaxSpeed * Time.deltaTime);
+                //transform.position = Vector3.MoveTowards(transform.position, vechover[iSeq], fMaxSpeed * Time.deltaTime);
+                transform.position += vecCurrHeading * Time.deltaTime * fMaxSpeed;
 
-                //if hover target is reached
-                if (transform.position == vechover[iSeq])
+                fSwoop = fSwoop + Time.deltaTime;
+
+                if(fSwoop>= fTime)
                 {
-                    if(fSwoop>= fTime)
-                    {
-                        iSeq = Random.Range(0, 7);
-                        fSwoop = 0.0f;
-                    }
-                    else
-                    {
-                        fSwoop = fSwoop + Time.deltaTime;
-                    }
-                    
+                    iSeq = Random.Range(0, 7);
+                    fSwoop = 0;
                 }
             }
         }
