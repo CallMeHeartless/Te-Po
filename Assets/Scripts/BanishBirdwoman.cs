@@ -6,9 +6,10 @@ public class BanishBirdwoman : MonoBehaviour {
     public GameObject birdwoman;
     public float riseSpeed = 25.0f;
     bool hasBeenBanished = false;
+    bool isRising = false;
 
     void Update() {
-        if (hasBeenBanished) {
+        if (isRising) {
             birdwoman.transform.Translate(new Vector3(0, riseSpeed, 0) * Time.deltaTime);
         }
 
@@ -17,7 +18,7 @@ public class BanishBirdwoman : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
         if(other.CompareTag("Player") && !hasBeenBanished) {
 
-
+            isRising = true;
             hasBeenBanished = true;
             StartCoroutine(DisableBirdwoman());
         }
@@ -27,6 +28,7 @@ public class BanishBirdwoman : MonoBehaviour {
         yield return new WaitForSeconds(3);
         birdwoman.SetActive(false);
         RuruCallManager.SafeCall();
+        isRising = false;
     }
 	
 }
