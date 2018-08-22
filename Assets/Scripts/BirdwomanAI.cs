@@ -18,7 +18,7 @@ public class BirdwomanAI : MonoBehaviour {
     private float fSwoop = 0.0f;
 
     private Vector3 vecPlayerPrev;
-    private bool bKILL = true;
+    private bool bKILL = false;
     public float fOffsetx1 = 5.0f;
     public float fOffsety1 = 5.0f;
     public float fOffsetx2 = 5.0f;

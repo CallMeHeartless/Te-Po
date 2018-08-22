@@ -664,12 +664,12 @@ GameObject:
   - component: {fileID: 23340751847551974}
   - component: {fileID: 65945994526187246}
   m_Layer: 0
-  m_Name: sm_SpiritPlatform (1)
+  m_Name: MagicPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1954989916486816
 GameObject:
   m_ObjectHideFlags: 1
@@ -697,6 +697,7 @@ GameObject:
   - component: {fileID: 23014360235590678}
   - component: {fileID: 114307748891803268}
   - component: {fileID: 82460776818276198}
+  - component: {fileID: 114892757714906728}
   m_Layer: 0
   m_Name: Whetu
   m_TagString: Untagged
@@ -986,7 +987,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1973569067241160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.75, z: 0}
+  m_LocalPosition: {x: -12, y: 10, z: 0}
   m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_Children:
   - {fileID: 4721285953420594}
@@ -1284,7 +1285,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1275364128533936}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -3, z: 0}
+  m_LocalPosition: {x: 0, y: -5, z: 0}
   m_LocalScale: {x: 20, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4374598940820088}
@@ -1638,17 +1639,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e27cfd8d7d48d45a8bbb1e0f52db9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fMaxSpeed: 5
+  fMaxSpeed: 1
   fSpeed: 0
   fMass: 0.175
   fPlayerRadius: 10
-  fRotationSpeed: 10
+  fRotationSpeed: 1
   fTime: 3
   Player: {fileID: 0}
   Platforms:
   - {fileID: 0}
-  MagicPlatform: {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  MagicPlatform: {fileID: 1954494002972678}
   MagicVFX: {fileID: 1030794075002636}
+--- !u!114 &114892757714906728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1973569067241160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6af115b47a0d6d40a979d9ce3a43eda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.01
+  frequency: 3
+  model: {fileID: 1921250241346826}
 --- !u!114 &114966582346567976
 MonoBehaviour:
   m_ObjectHideFlags: 1
