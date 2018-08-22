@@ -77,6 +77,7 @@ public class WhetuAI : MonoBehaviour {
                 bPlatform = true;
                 vecTar = Platforms[i].transform.position;
                 vecTar.y = vecTar.y + 5.0f;
+                break;
             }
 
             //if far away
