@@ -12,16 +12,20 @@ public class BirdwomanAI : MonoBehaviour {
     private Quaternion quatLookRotation;
     public float fRotationSpeed = 10.0f;
 
-    private Vector3[] vechover = new Vector3[5];
+    private Vector3[] vechover = new Vector3[2];
     private int iSeq = 0;
     public float fTime = 3.0f;
     private float fSwoop = 0.0f;
 
     private Vector3 vecPlayerPrev;
     private bool bKILL = true;
+    public float fOffsetx1 = 5.0f;
+    public float fOffsety1 = 5.0f;
+    public float fOffsetx2 = 5.0f;
+    public float fOffsety2 = 5.0f;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 
@@ -30,32 +34,24 @@ public class BirdwomanAI : MonoBehaviour {
     {
 
         vechover[0] = Player.transform.position;
-        vechover[0].x = vechover[0].x - 0.0f;
-        vechover[0].y = vechover[0].y + 5.0f;
+        vechover[0].x = vechover[0].x - fOffsetx1;
+        vechover[0].y = vechover[0].y + fOffsety1;
 
         vechover[1] = Player.transform.position;
-        vechover[1].x = vechover[1].x - 10.0f;
-        vechover[1].y = vechover[1].y + 0.0f;
+        vechover[1].x = vechover[1].x + fOffsetx2;
+        vechover[1].y = vechover[1].y + fOffsety2;
 
-        vechover[2] = Player.transform.position;
-        vechover[2].x = vechover[2].x - 5.0f;
-        vechover[2].y = vechover[2].y + 5.0f;
-
-        vechover[3] = Player.transform.position;
-        vechover[3].x = vechover[3].x + 5.0f;
-        vechover[3].y = vechover[3].y + 5.0f;
-
-        vechover[4] = Player.transform.position;
-        vechover[4].x = vechover[4].x + 10.0f;
-        vechover[4].y = vechover[4].y + 0.0f;
 
         //rotate towards tar
         //find vec from Whetu to target
         vecDir = (Player.transform.position - transform.position).normalized;
+        vecDir.y = 0;
         //create rotation
         quatLookRotation = Quaternion.LookRotation(vecDir);
         //rotate over time
         transform.rotation = Quaternion.Slerp(transform.rotation, quatLookRotation, fRotationSpeed * Time.deltaTime);
+        // ugh
+        
 
         //KILL!
         if (bKILL == true)
@@ -68,7 +64,7 @@ public class BirdwomanAI : MonoBehaviour {
                 {
                     bKILL = false;
                     fSwoop = 0.0f;
-                    iSeq = Random.Range(0, 4);
+                    iSeq = Random.Range(0, 2);
                 }
                 else
                 {

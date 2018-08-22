@@ -94,7 +94,17 @@ ModelImporter:
     9500000: //RootNode
     13700000: sm_Ruru
     13700002: sm_Ruru8
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blinn1
+    second: {fileID: 2100000, guid: 7d439292590c6fd4aaa9a657dc8d6470, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blinn2
+    second: {fileID: 2100000, guid: 5fdf5dee52ce9f6449a6a45a8d102521, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
