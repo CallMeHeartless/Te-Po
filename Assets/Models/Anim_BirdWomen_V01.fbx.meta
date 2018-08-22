@@ -90,7 +90,17 @@ ModelImporter:
     9500000: //RootNode
     13700000: cm_BirdLady
     13700002: cm_BirdLady_Cel
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_BirdLady
+    second: {fileID: 2100000, guid: 6b5a0cb01db426e41a1cbe0df940f178, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_BirdLady_Cel
+    second: {fileID: 2100000, guid: 5fdf5dee52ce9f6449a6a45a8d102521, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
