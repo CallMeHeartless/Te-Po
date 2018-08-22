@@ -519,6 +519,7 @@ GameObject:
   - component: {fileID: 4667938630011530}
   - component: {fileID: 114649454052738872}
   - component: {fileID: 114712996161253692}
+  - component: {fileID: 136942906989972704}
   m_Layer: 0
   m_Name: BirdWoman
   m_TagString: Untagged
@@ -1228,6 +1229,19 @@ MonoBehaviour:
   amplitude: 0.02
   frequency: 3
   model: {fileID: 1379793707414712}
+--- !u!136 &136942906989972704
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1767565013637726}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &137285284883374162
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

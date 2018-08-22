@@ -18,6 +18,8 @@ public class WhetuAI : MonoBehaviour {
 
     //rotation
     private Vector3 vecDir;
+    private Vector3 vecCurr;
+    private Vector3 vecTarHead;
     private Quaternion quatLookRotation;
     public float fRotationSpeed = 10.0f;
 
@@ -49,10 +51,7 @@ public class WhetuAI : MonoBehaviour {
     void FixedUpdate()
     {
         vecTargetHeading = vechover[iSeq] - transform.position;
-
         vecCurrHeading = Vector3.Lerp(vecCurrHeading, vecTargetHeading, Time.deltaTime);
-
-
     }
 
     // Update is called once per frame
@@ -103,7 +102,8 @@ public class WhetuAI : MonoBehaviour {
             transform.rotation = Quaternion.Slerp(transform.rotation, quatLookRotation, fRotationSpeed * Time.deltaTime);
 
             //move towards platform target
-            transform.position = Vector3.MoveTowards(transform.position, vecTar, (fMaxSpeed * 2) * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, vecTar, (fMaxSpeed * 10) * Time.deltaTime);
+
             //if arrived
             if(transform.position == vecTar)
             {
@@ -128,9 +128,12 @@ public class WhetuAI : MonoBehaviour {
                 quatLookRotation = Quaternion.LookRotation(vecDir);
                 //rotate over time
                 transform.rotation = Quaternion.Slerp(transform.rotation, quatLookRotation, fRotationSpeed * Time.deltaTime);
-  
+
+                vecTarHead = vecTar - transform.position;
+                vecCurr = Vector3.Lerp(vecCurr, vecTarHead, Time.deltaTime);
+
                 //move towards player
-                transform.position = Vector3.MoveTowards(transform.position, vecTar, fMaxSpeed * Time.deltaTime);
+                transform.position += vecCurr * Time.deltaTime * fMaxSpeed;
             }
             else
             {

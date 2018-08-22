@@ -53,6 +53,7 @@ public class BirdwomanAI : MonoBehaviour {
         // ugh
         
 
+
         //KILL!
         if (bKILL == true)
         {
@@ -93,4 +94,14 @@ public class BirdwomanAI : MonoBehaviour {
 
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            PlayerController.Kill();
+        }
+    }
+
 }
+
+

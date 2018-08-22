@@ -66,4 +66,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialUIText: {fileID: 0}
   tutorialText: Press SPACE to jump
-  playsWarning: 1
+  playsWarning: 0
