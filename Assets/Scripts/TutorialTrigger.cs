@@ -7,6 +7,9 @@ public class TutorialTrigger : MonoBehaviour {
     public GameObject tutorialUIText;
     public string tutorialText;
 
+    private bool hasPlayedWarning = false;
+    public bool playsWarning = true;
+
 	// Use this for initialization
 	void Start () {
               
@@ -24,7 +27,10 @@ public class TutorialTrigger : MonoBehaviour {
             // Display and enable text
             tutorialUIText.GetComponentInChildren<Text>().text = tutorialText;
             tutorialUIText.SetActive(true);
-            Debug.Log("Hit");
+            // Warning call
+            if(playsWarning && !hasPlayedWarning) {
+                RuruCallManager.WarningCall();
+            }
         }
     }
 
