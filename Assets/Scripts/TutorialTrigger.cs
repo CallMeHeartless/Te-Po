@@ -9,10 +9,7 @@ public class TutorialTrigger : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //whetuUIText = GameObject.Find("WhetuUI/Text").GetComponent<GameObject>();
-
-        Debug.Log(whetuUIText.name);
-        
+              
 	}
 	
 	// Update is called once per frame
@@ -27,6 +24,7 @@ public class TutorialTrigger : MonoBehaviour {
             // Display and enable text
             whetuUIText.GetComponentInChildren<Text>().text = tutorialText;
             whetuUIText.SetActive(true);
+            Debug.Log("Hit");
         }
     }
 
