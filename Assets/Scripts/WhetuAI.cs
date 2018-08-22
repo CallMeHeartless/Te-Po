@@ -103,7 +103,7 @@ public class WhetuAI : MonoBehaviour {
             transform.rotation = Quaternion.Slerp(transform.rotation, quatLookRotation, fRotationSpeed * Time.deltaTime);
 
             //move towards platform target
-            transform.position = Vector3.MoveTowards(transform.position, vecTar, (fMaxSpeed * 10) * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, vecTar, (fMaxSpeed * 15) * Time.deltaTime);
 
             //if arrived
             if(transform.position == vecTar)
