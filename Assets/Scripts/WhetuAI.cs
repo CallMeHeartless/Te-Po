@@ -34,6 +34,7 @@ public class WhetuAI : MonoBehaviour {
     public GameObject Player;
     public GameObject[] Platforms;
     public GameObject MagicPlatform;
+    public GameObject MagicVFX;
 
     private int iSeq = 0;
 
@@ -74,6 +75,7 @@ public class WhetuAI : MonoBehaviour {
                 bPlatform = false;
                 //disable magic platform
                 MagicPlatform.SetActive(false);
+                MagicVFX.SetActive(false);
             }
         }
 
@@ -95,6 +97,7 @@ public class WhetuAI : MonoBehaviour {
             {
                 //make magic platform
                 MagicPlatform.SetActive(true);
+                MagicVFX.SetActive(true);
             }
 
             

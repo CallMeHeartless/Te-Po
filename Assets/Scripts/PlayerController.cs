@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour {
     public float turnSpeed = 100.0f;
     public float jumpForce = 100.0f;
     public float gravityMultiplier = 2.5f;
+    public AudioSource playerRunning;
 
 
 
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour {
         instance = this;
         rb = this.GetComponent<Rigidbody>();
         anim = this.GetComponentInChildren<Animator>();
+       // playerRunning = this.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -42,6 +44,10 @@ public class PlayerController : MonoBehaviour {
             targetRotation = Quaternion.LookRotation(Vector3.forward * movementDirection, Vector3.up);
             anim.SetTrigger("Walk");
             anim.ResetTrigger("Idle");
+            // Sound
+            if (!playerRunning.isPlaying && rb.velocity.y == 0.0f) {
+                playerRunning.Play();
+            }
             
         } else {
             // Stop player's horizontal movement
@@ -49,6 +55,10 @@ public class PlayerController : MonoBehaviour {
             // Animation
             anim.ResetTrigger("Walk");
             anim.SetTrigger("Idle");
+            // Sound
+            if(playerRunning.isPlaying) {
+                playerRunning.Stop();
+            }
         }
 
         // Accelerate player if falling
@@ -74,6 +84,8 @@ public class PlayerController : MonoBehaviour {
         rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.VelocityChange);
         // Jump animation
         anim.SetTrigger("Jump");
+        // Sound
+        playerRunning.Stop();
     }
 
     // Slow the player (when in mud pit)
