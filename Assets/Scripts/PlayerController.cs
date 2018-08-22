@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour {
         movementDirection = Input.GetAxisRaw("Horizontal");
         if(movementDirection != 0.0f) {
             rb.velocity = new Vector3(movementDirection * speed, rb.velocity.y, 0);
+            //rb.AddForce(new Vector3(movementDirection * speed, 0, 0), ForceMode.Force);
             targetRotation = Quaternion.LookRotation(Vector3.forward * movementDirection, Vector3.up);
             anim.SetTrigger("Walk");
             anim.ResetTrigger("Idle");
