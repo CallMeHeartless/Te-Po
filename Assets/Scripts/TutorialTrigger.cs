@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class TutorialTrigger : MonoBehaviour {
-    public GameObject whetuUIText;
+    public GameObject tutorialUIText;
     public string tutorialText;
 
 	// Use this for initialization
@@ -22,8 +22,8 @@ public class TutorialTrigger : MonoBehaviour {
         
         if (other.CompareTag("Player")) {
             // Display and enable text
-            whetuUIText.GetComponentInChildren<Text>().text = tutorialText;
-            whetuUIText.SetActive(true);
+            tutorialUIText.GetComponentInChildren<Text>().text = tutorialText;
+            tutorialUIText.SetActive(true);
             Debug.Log("Hit");
         }
     }
@@ -33,7 +33,7 @@ public class TutorialTrigger : MonoBehaviour {
         
         if (other.CompareTag("Player")) {
             // Disable text
-            whetuUIText.SetActive(false);
+            tutorialUIText.SetActive(false);
         }
     }
 }
