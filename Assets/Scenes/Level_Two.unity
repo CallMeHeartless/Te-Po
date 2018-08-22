@@ -938,21 +938,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 23
       objectReference: {fileID: 0}
-    - target: {fileID: 108162586526023312, guid: 89ae200f61a155441bf25165b009ced1,
-        type: 2}
-      propertyPath: m_Intensity
-      value: 0.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 108114635519980934, guid: 89ae200f61a155441bf25165b009ced1,
-        type: 2}
-      propertyPath: m_Intensity
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 108162586526023312, guid: 89ae200f61a155441bf25165b009ced1,
-        type: 2}
-      propertyPath: m_BounceIntensity
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1956884065677728, guid: 89ae200f61a155441bf25165b009ced1, type: 2}
       propertyPath: m_Name
       value: _Lighting
