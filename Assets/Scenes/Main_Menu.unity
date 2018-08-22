@@ -113,6 +113,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &95841979
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4155540106138472, guid: 89ae200f61a155441bf25165b009ced1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155540106138472, guid: 89ae200f61a155441bf25165b009ced1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 7.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155540106138472, guid: 89ae200f61a155441bf25165b009ced1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155540106138472, guid: 89ae200f61a155441bf25165b009ced1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.3580943
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155540106138472, guid: 89ae200f61a155441bf25165b009ced1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.10014363
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155540106138472, guid: 89ae200f61a155441bf25165b009ced1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0.039612576
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155540106138472, guid: 89ae200f61a155441bf25165b009ced1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.9274538
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155540106138472, guid: 89ae200f61a155441bf25165b009ced1, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89ae200f61a155441bf25165b009ced1, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &146325994
 GameObject:
   m_ObjectHideFlags: 0
@@ -2034,7 +2076,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 10b8b39b30f64134882e08564f34268d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9088a5b40088e7b4d99629f4ac47aaa0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
