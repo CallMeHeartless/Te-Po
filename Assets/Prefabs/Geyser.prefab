@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23367375487874378}
   - component: {fileID: 65444187104560586}
   - component: {fileID: 114185386732974228}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Geyser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 4471020192505186}
   - component: {fileID: 198477329416751836}
   - component: {fileID: 199968715385329518}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: VFX_Steam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,10 +55,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4311764185514590}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GeyserHeight
   m_TagString: Untagged
-  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4957339805127036}
   - component: {fileID: 198420567817555794}
   - component: {fileID: 199002565726162536}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: VFX_Geyser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 4088268359495368}
   - component: {fileID: 33921943767730658}
   - component: {fileID: 23880156077260190}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: sm_Geyser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
